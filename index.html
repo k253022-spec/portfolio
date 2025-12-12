@@ -1,178 +1,287 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faisal's Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Faisal — Software Engineer | FAST University</title>
+  <meta name="description" content="Faisal — Software Engineering student at FAST University. Portfolio including projects, skills, and contact.">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+  :root {
+    --blue: #2563eb;
+    --bg: #f3f6fb;
+    --card: #ffffff;
+    --muted: #556070;
+  }
 
-    <style>
-        :root {
-            --bg: #f5f7fa;
-            --dark: #0f1724;
-            --primary: #3a6ff8;
-            --light: #ffffff;
-            --border: #d4d7dd;
-        }
+  * {
+    box-sizing: border-box;
+  }
 
-        body {
-            font-family: Roboto, Arial, Helvetica, sans-serif;
-            background: var(--bg);
-            color: var(--dark);
-            line-height: 1.5;
-            margin: 0;
-        }
+  html, body {
+    height: 100%;
+  }
 
-        .container {
-            max-width: 1000px;
-            margin: 32px auto;
-            padding: 20px;
-        }
+  body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: #0f1724;
+    line-height: 1.5;
+    margin: 0;
+  }
 
-        header {
-            text-align: center;
-            padding: 40px 0;
-        }
+  .container {
+    max-width: 1000px;
+    margin: 32px auto;
+    padding: 20px;
+  }
 
-        header h1 {
-            font-size: 36px;
-            margin: 0;
-        }
+  .site-header {
+    background: linear-gradient(90deg, var(--blue), #60a5fa);
+    color: #fff;
+    padding: 36px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.12);
+  }
 
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
+  .site-header h1 {
+    font-size: 2rem;
+    margin: 0 0 6px;
+  }
 
-        section {
-            background: var(--light);
-            padding: 20px;
-            margin-top: 25px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-        }
+  .site-header p {
+    opacity: 0.95;
+    margin: 0;
+  }
 
-        section h2 {
-            margin-top: 0;
-            font-size: 26px;
-        }
+  nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
 
-        p {
-            margin: 8px 0 14px 0;
-            white-space: pre-line;
-        }
+  .nav-link {
+    background: #0f1724;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
 
-        .project,
-        .cert {
-            padding: 12px;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            margin-bottom: 12px;
-        }
+  .nav-link:hover {
+    opacity: 0.9;
+  }
 
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px 0;
-            color: #666;
-        }
-    </style>
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  section.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(15, 23, 36, 0.06);
+  }
+
+  section.card h2 {
+    color: var(--blue);
+    margin-bottom: 10px;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .skill {
+    background: #eef2ff;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+    color: #1e293b;
+  }
+
+  .projects-list {
+    display: grid;
+    gap: 12px;
+  }
+
+  .project {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e6eefc;
+  }
+
+  .project a {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--blue);
+  }
+
+  .project p {
+    margin: 6px 0 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .btn-primary {
+    background: var(--blue);
+    color: #fff;
+  }
+
+  .btn-muted {
+    background: #eef2ff;
+    color: var(--blue);
+  }
+
+  footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #475569;
+    font-size: 0.9rem;
+  }
+
+  @media(min-width: 800px) {
+    main {
+      grid-template-columns: 1fr 380px;
+    }
+  }
+
+  .quick {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .quick a {
+    background: var(--blue);
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+</style>
+
 </head>
-
 <body>
-
-    <div class="container">
-
-        <header>
-            <h1>Faisal</h1>
-            <p>
-                Software Engineering student at FAST University.  
-                I like building things that actually work and make sense.  
-                Most of my time goes into writing cleaner code, learning new concepts,  
-                and experimenting with ideas.  
-                I mainly work with C, C++, JavaScript and try to improve my UI skills too.
-            </p>
-        </header>
-
-        <section>
-            <h2>Home</h2>
-            <p>
-                Hi, I’m Faisal.  
-                I’m currently studying Software Engineering at FAST University.  
-                I enjoy creating small projects, solving coding problems,  
-                and learning more about how software actually works.
-            </p>
-        </section>
-
-        <section>
-            <h2>About Me</h2>
-            <p>
-                I'm from Karachi and completed my FSC in Pre-Engineering.  
-                Right now, I’m focused on improving my programming skills  
-                and getting better at understanding systems, logic building,  
-                and trying out new technologies whenever I get the chance.
-            </p>
-        </section>
-
-        <section>
-            <h2>Projects</h2>
-
-            <p>
-                Here are a few projects I’ve worked on.  
-                Each one taught me something new — logic building, file handling,  
-                or understanding how things fit together.
-            </p>
-
-            <div class="project">
-                <strong>Project Example 1</strong>
-                <p>Simple description of your project goes here.</p>
-            </div>
-
-            <div class="project">
-                <strong>Project Example 2</strong>
-                <p>Another project description here.</p>
-            </div>
-
-        </section>
-
-        <section>
-            <h2>Experience</h2>
-            <p>
-                I’ve worked on several academic projects  
-                and taken part in coding exercises and challenges.  
-                I’m currently looking for internship opportunities  
-                and also interested in contributing to open-source.
-            </p>
-        </section>
-
-        <section>
-            <h2>Certificates</h2>
-
-            <p>
-                Here are some certificates I've earned.  
-                I’ll keep adding more as I complete new courses or workshops.
-            </p>
-
-            <div class="cert">Certificate Example 1</div>
-            <div class="cert">Certificate Example 2</div>
-
-        </section>
-
-        <section>
-            <h2>Contact</h2>
-            <p>
-                If you want to reach out, feel free to send me an email.  
-                I’m open to learning opportunities, discussions,  
-                or anything related to development.
-            </p>
-        </section>
-
-        <footer>
-            © 2025 Faisal — All Rights Reserved
-        </footer>
-
+  <div class="container">
+    <header class="site-header">
+      <h1>Faisal</h1>
+      <p>Software Engineering student — FAST University · C / C++ / JavaScript · Building reliable systems and neat user interfaces</p>
+      <nav aria-label="Primary" style="margin-top:12px">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#certificates">Certificates</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section id="home" class="card">
+        <h2>Home</h2>
+        <p>Hello — I'm Faisal, a Software Engineering student at FAST University. I build small tools, practice algorithms and enjoy web development.</p>
+      </section>
+      <section id="about" class="card">
+        <h2>About Me</h2>
+        <p>From Karachi. Completed FSC in Pre-Engineering. Currently studying Software Engineering. Passionate about programming, problem solving and learning new technologies.</p>
+      </section>
+      <section id="skills" class="card">
+        <h2>Skills</h2>
+        <div class="skills">
+          <span class="skill">C</span>
+          <span class="skill">C++</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">Data Structures</span>
+          <span class="skill">OOP</span>
+        </div>
+      </section>
+      <section id="projects" class="card">
+        <h2>Projects</h2>
+        <div class="projects-list" id="projects-list">
+          <article class="project">
+            <!-- Replace the href with your Google Drive link for the project folder or file -->
+            <a href="https://drive.google.com/drive/folders/PUT-YOUR-DRIVE-LINK-HERE" target="_blank" rel="noopener">Online Election System (C) — Drive</a>
+            <p>Console-based C project with file storage and basic authentication (academic).</p>
+          </article>
+          <article class="project">
+            <a href="https://drive.google.com/drive/folders/PUT-YOUR-DRIVE-LINK-HERE" target="_blank" rel="noopener">Project 2 — Drive</a>
+            <p>Add your Drive or GitHub link here.</p>
+          </article>
+        </div>
+      </section>
+      <section id="experience" class="card">
+        <h2>Experience</h2>
+        <p>Developed academic projects and participated in coding challenges. Seeking internships and contributions to open-source.</p>
+      </section>
+      <section id="certificates" class="card">
+        <h2>Certificates</h2>
+        <p>List your certificates here — you can link to certificate images or Drive PDFs.</p>
+      </section>
+      <section id="contact" class="card">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:faisalshk190@gmail.com">faisalshk190@gmail.com</a></p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Faisal — Built with care</p>
+    </footer>
+    <div class="quick" aria-hidden>
+      <a href="#contact">Contact</a>
+      <a href="#projects">Projects</a>
     </div>
-
+  </div>
+  <script>
+    // Smooth scroll and simple responsive nav (mobile)
+    document.querySelectorAll('a.nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if(href && href.startsWith('#')){
+          e.preventDefault();
+          const el = document.querySelector(href);
+          if(el) el.scrollIntoView({behavior:'smooth'});
+        }
+      });
+    });
+    // If you prefer to store Drive links in browser localStorage, this snippet replaces placeholders:
+    (function(){
+      try{
+        const projects = JSON.parse(localStorage.getItem('driveLinks') || '[]');
+        if(projects.length){
+          const list = document.getElementById('projects-list');
+          list.innerHTML = '';
+          projects.forEach(p=>{
+            const art = document.createElement('article');
+            art.className = 'project';
+            art.innerHTML = <a href="${p.link}" target="_blank" rel="noopener">${p.title}</a><p>${p.desc}</p>;
+            list.appendChild(art);
+          })
+        }
+      }catch(e){/* ignore */ }
+    })();
+  </script>
 </body>
-
 </html>
