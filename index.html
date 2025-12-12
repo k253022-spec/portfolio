@@ -7,181 +7,154 @@
   <meta name="description" content="Faisal — Software Engineering student at FAST University. Portfolio including projects, skills, and contact.">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-  :root {
-    --blue: #2563eb;
-    --bg: #f3f6fb;
-    --card: #ffffff;
-    --muted: #556070;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  html, body {
-    height: 100%;
-  }
-
-  body {
-    font-family: Roboto, Arial, Helvetica, sans-serif;
-    background: var(--bg);
-    color: #0f1724;
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  .container {
-    max-width: 1000px;
-    margin: 32px auto;
-    padding: 20px;
-  }
-
-  .site-header {
-    background: linear-gradient(90deg, var(--blue), #60a5fa);
-    color: #fff;
-    padding: 36px;
-    border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.12);
-  }
-
-  .site-header h1 {
-    font-size: 2rem;
-    margin: 0 0 6px;
-  }
-
-  .site-header p {
-    opacity: 0.95;
-    margin: 0;
-  }
-
-  nav {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 14px;
-    flex-wrap: wrap;
-  }
-
-  .nav-link {
-    background: #0f1724;
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-
-  .nav-link:hover {
-    opacity: 0.9;
-  }
-
-  main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin-top: 20px;
-  }
-
-  section.card {
-    background: var(--card);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(15, 23, 36, 0.06);
-  }
-
-  section.card h2 {
-    color: var(--blue);
-    margin-bottom: 10px;
-  }
-
-  .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .skill {
-    background: #eef2ff;
-    padding: 8px 12px;
-    border-radius: 999px;
-    font-weight: 600;
-    color: #1e293b;
-  }
-
-  .projects-list {
-    display: grid;
-    gap: 12px;
-  }
-
-  .project {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #e6eefc;
-  }
-
-  .project a {
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--blue);
-  }
-
-  .project p {
-    margin: 6px 0 0;
-    color: var(--muted);
-    font-size: 0.95rem;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 10px 14px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 700;
-  }
-
-  .btn-primary {
-    background: var(--blue);
-    color: #fff;
-  }
-
-  .btn-muted {
-    background: #eef2ff;
-    color: var(--blue);
-  }
-
-  footer {
-    margin-top: 20px;
-    text-align: center;
-    color: #475569;
-    font-size: 0.9rem;
-  }
-
-  @media(min-width: 800px) {
-    main {
-      grid-template-columns: 1fr 380px;
+    :root {
+      --blue: #2563eb;
+      --bg: #f3f6fb;
+      --card: #ffffff;
+      --muted: #556070;
     }
-  }
-
-  .quick {
-    position: fixed;
-    right: 18px;
-    bottom: 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .quick a {
-    background: var(--blue);
-    color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 700;
-  }
-</style>
-
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+    }
+    body {
+      font-family: Roboto, Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: #0f1724;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 20px;
+    }
+    .site-header {
+      background: linear-gradient(90deg, var(--blue), #60a5fa);
+      color: #fff;
+      padding: 36px;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(37, 99, 235, 0.12);
+    }
+    .site-header h1 {
+      font-size: 2rem;
+      margin: 0 0 6px;
+    }
+    .site-header p {
+      opacity: 0.95;
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      background: #0f1724;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .nav-link:hover {
+      opacity: 0.9;
+    }
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    section.card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(15, 23, 36, 0.06);
+    }
+    section.card h2 {
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill {
+      background: #eef2ff;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      color: #1e293b;
+    }
+    .projects-list {
+      display: grid;
+      gap: 12px;
+    }
+    .project {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #e6eefc;
+    }
+    .project a {
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--blue);
+    }
+    .project p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+    }
+    .btn-muted {
+      background: #eef2ff;
+      color: var(--blue);
+    }
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #475569;
+      font-size: 0.9rem;
+    }
+    @media(min-width: 800px) {
+      main {
+        grid-template-columns: 1fr 380px;
+      }
+    }
+    .quick {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .quick a {
+      background: var(--blue);
+      color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -223,7 +196,6 @@
         <h2>Projects</h2>
         <div class="projects-list" id="projects-list">
           <article class="project">
-            <!-- Replace the href with your Google Drive link for the project folder or file -->
             <a href="https://drive.google.com/drive/folders/PUT-YOUR-DRIVE-LINK-HERE" target="_blank" rel="noopener">Online Election System (C) — Drive</a>
             <p>Console-based C project with file storage and basic authentication (academic).</p>
           </article>
@@ -255,7 +227,6 @@
     </div>
   </div>
   <script>
-    // Smooth scroll and simple responsive nav (mobile)
     document.querySelectorAll('a.nav-link').forEach(link => {
       link.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -266,7 +237,6 @@
         }
       });
     });
-    // If you prefer to store Drive links in browser localStorage, this snippet replaces placeholders:
     (function(){
       try{
         const projects = JSON.parse(localStorage.getItem('driveLinks') || '[]');
@@ -280,7 +250,7 @@
             list.appendChild(art);
           })
         }
-      }catch(e){/* ignore */ }
+      }catch(e){}
     })();
   </script>
 </body>
